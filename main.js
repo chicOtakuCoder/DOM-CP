@@ -115,15 +115,15 @@
       Object.values(cartItems).map(item => {
          productContainer.innerHTML += `
          <div class= "product">
-            <ion-icon name="close-circle"></ion-icon>
+            <ion-icon class="deletebtn" name="close-circle"></ion-icon>
             <img src="./images/${item.tag}.jpg">
             <span>${item.name}</span>
          </div>
          <div class="price">$${item.price},00</div>
          <div class="quantity">
-            <ion-icon name="remove-circle"></ion-icon>
+            <ion-icon class="minusbtn" name="remove-circle"></ion-icon>
             <span>${item.inCart}</span>
-            <ion-icon name="add-circle"></ion-icon>
+            <ion-icon class="addbtn" name="add-circle"></ion-icon>
          </div>
          <div class="total">
             $${item.inCart * item.price},00
@@ -139,6 +139,17 @@
       ` 
     }
  }
+
+   // let btnAdd = document.querySelector ('.addbtn');
+   // let btnMinus = document.querySelector ('.minusbtn');
+   // let btnDelete = document.querySelector ('.deletebtn')
+
+   // btnAdd.addEventListener ('click', () => {
+
+   // })
+
+   let btnMinus = document.getElementsByClassName('minusbtn');
+   console.log (btnMinus);
 
  onLoadCartNumbers();
  displayCart()
